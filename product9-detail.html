@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product 9 Details - E-Commerce Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-logo">E-Commerce Store</div>
+        <div class="nav-links">
+            <a href="index.html">首页</a>
+            <a href="products.html">所有商品</a>
+            <a href="about.html">关于我们</a>
+        </div>
+    </nav>
+
+    <!-- 商品详情容器 -->
+    <div class="product-detail-container">
+        <div class="product-detail-content">
+            <div class="product-image">
+                <img src="product9.jpg" alt="商品9">
+            </div>
+            <div class="product-info">
+                <h2 class="product-title">Product 9 Smart Watch</h2>
+                <p class="product-description">1.75-inch AMOLED display, heart rate and blood oxygen monitoring, 14-day battery life, NFC payment support, 50m water resistance.</p>
+                <p class="price">￥699</p>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 社交联系浮动按钮（补充公共结构） -->
+    <button class="contact-btn" id="contactBtn">
+        <img src="whatsapp-icon.svg" alt="联系图标" class="contact-icon">
+    </button>
+
+    <!-- 社交联系模态窗口（补充公共结构） -->
+    <div class="contact-modal" id="contactModal">
+        <div class="modal-content">
+            <span class="close" id="closeBtn">&times;</span>
+            <h3>联系我们</h3>
+            <div class="social-links">
+                <a href="https://wa.me/123456789" target="_blank">
+                    <img src="whatsapp-icon.svg" alt="WhatsApp">
+                    <span>WhatsApp 联系</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

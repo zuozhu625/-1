@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product 4 Detail - Independent Station</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 导航栏（公共结构，与其他页面一致） -->
+    <nav class="navbar">
+        <div class="logo">Independent Station</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#products">Products</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- 商品详情内容（公共结构，与其他页面一致） -->
+    <div class="product-detail-container">
+        <div class="product-detail-content">
+            <div class="product-image">
+                <img src="product4.jpg" alt="商品4"> <!-- 商品4专属图片 -->
+            </div>
+            <div class="product-info">
+                <h2 class="product-title">Product 4 Outdoor Leisure Model</h2> <!-- Product 4 Exclusive Title -->
+                <p class="price">¥899.00</p> <!-- Product 4 Exclusive Price -->
+                <p class="product-description">
+                    Product 4 Detailed Description: Made with waterproof and breathable fabric, multi-pocket design,
+                    suitable for hiking and camping, certified by international outdoor equipment standards, with 2-year warranty service. <!-- Product 4 Exclusive Description -->
+                </p>
+                <button class="buy-btn">Buy Now</button> <!-- Public Purchase Button -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 社交联系浮动按钮（公共结构，与其他页面一致） -->
+    <button class="contact-btn" id="contactBtn"> <!-- 新增 id="contactBtn" -->
+        <img src="whatsapp-icon.svg" alt="Contact Icon" class="contact-icon">
+    </button>
+
+    <!-- 社交联系模态窗口（公共结构，与其他页面一致） -->
+    <div class="contact-modal" id="contactModal"> <!-- 新增 id="contactModal" -->
+        <div class="modal-content">
+            <span class="close" id="closeBtn">&times;</span> <!-- 新增 id="closeBtn" -->
+            <h3>Contact Us</h3>
+            <div class="social-links">
+                <a href="https://wa.me/123456789" target="_blank">
+                    <img src="whatsapp-icon.svg" alt="WhatsApp">
+                    <span>WhatsApp Contact</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 新增：支付模态框 -->
+    <div class="payment-modal">
+        <div class="modal-content">
+            <span class="close-payment">&times;</span>
+            <h3>Scan to Pay</h3>
+            <img src="qrcode.jpg" alt="收款二维码" class="payment-qrcode">
+            <p class="payment-tip">Please contact customer service to confirm the order after successful payment</p>
+            <button class="download-btn">Download to Album</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

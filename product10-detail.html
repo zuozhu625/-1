@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product 10 Detail - Product Independent Station</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-logo">Product Independent Station</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="products.html">All Products</a>
+            <a href="about.html">About Us</a>
+        </div>
+    </nav>
+
+    <!-- 商品详情容器 -->
+    <div class="product-detail-container">
+        <div class="product-detail-content">
+            <div class="product-image">
+                <img src="product10.jpg" alt="Product 10">
+            </div>
+            <div class="product-info">
+                <h2 class="product-title">Product 10 Wireless Charger</h2>
+                <p class="product-description">Simultaneous charging for multiple devices, 15W fast charging, intelligent temperature control, Qi protocol compatible, non-slip design.</p>
+                <p class="price">¥299</p>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 社交联系浮动按钮（补充公共结构） -->
+    <button class="contact-btn" id="contactBtn">
+        <img src="whatsapp-icon.svg" alt="Contact Icon" class="contact-icon">
+    </button>
+
+    <!-- 社交联系模态窗口（补充公共结构） -->
+    <div class="contact-modal" id="contactModal">
+        <div class="modal-content">
+            <span class="close" id="closeBtn">&times;</span>
+            <h3>Contact Us</h3>
+            <div class="social-links">
+                <a href="https://wa.me/123456789" target="_blank">
+                    <img src="whatsapp-icon.svg" alt="WhatsApp">
+                    <span>WhatsApp Contact</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

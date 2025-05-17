@@ -1,0 +1,14 @@
+[
+    {
+        "name": "商品1",
+        "image": "https://via.placeholder.com/250",
+        "description": "这是商品1的描述",
+        "price": 99
+    },
+    {
+        "name": "商品2",
+        "image": "https://via.placeholder.com/250",
+        "description": "这是商品2的描述",
+        "price": 199
+    }
+]

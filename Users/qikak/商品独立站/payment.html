@@ -1,0 +1,27 @@
+<button class="download-btn" id="downloadBtn">Download to Album</button>
+...
+<script>
+document.getElementById('downloadBtn').addEventListener('click', function() {
+    const qrcodeImg = document.querySelector('.payment-qrcode');
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+    
+    canvas.width = qrcodeImg.naturalWidth;
+    canvas.height = qrcodeImg.naturalHeight;
+    
+    ctx.drawImage(qrcodeImg, 0, 0, canvas.width, canvas.height);
+    
+    canvas.toBlob(function(blob) {
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'payment_qrcode.jpg';
+        a.style.display = 'none';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    }, 'image/jpeg');
+});
+</script>
+<script src="script.js"></script>

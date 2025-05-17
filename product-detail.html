@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品详情 - 经典款衬衫</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 复用导航栏 -->
+    <nav class="navbar">
+        <div class="logo">品牌LOGO</div>
+        <div class="nav-links">
+            <a href="index.html">首页</a>
+            <a href="index.html#products">商品</a>
+            <a href="#contact">联系</a>
+        </div>
+    </nav>
+
+    <!-- 商品详情内容 -->
+    <div class="product-detail-container">
+        <div class="product-detail-content">
+            <div class="product-image">
+                <img src="product1.jpg" alt="经典款衬衫" id="detailImage">
+            </div>
+            <div class="product-info">
+                <h2 class="product-title">经典款衬衫</h2> <!-- 统一为h2 -->
+                <p class="price">¥299</p> <!-- 统一价格类名为.price -->
+                <div class="product-description"> <!-- 保留描述区域类名 -->
+                    <h3>商品详情</h3>
+                    <p>优质棉料，透气舒适，多种颜色可选。采用精细剪裁工艺，贴合身形，适合日常通勤与休闲场合。</p>
+                    <ul>
+                        <li>面料：100%精梳棉</li>
+                        <li>颜色：白色/蓝色/灰色</li>
+                        <li>尺码：S/M/L/XL</li>
+                    </ul>
+                </div>
+                <button class="buy-btn">立即购买</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 复用页脚 -->
+    <footer class="footer">
+        <p>© 2024 商品独立站 | 版权所有</p>
+    </footer>
+
+    <!-- 新增：支付模态框 -->
+    <div class="payment-modal">
+        <div class="modal-content">
+            <span class="close-payment">&times;</span>
+            <h3>扫码支付</h3>
+            <img src="qrcode.jpg" alt="收款二维码" class="payment-qrcode">
+            <p class="payment-tip">支付成功后请联系客服确认订单</p>
+            <button class="download-btn">下载到相册</button>
+        </div>
+    </div>
+
+    <!-- 社交联系浮动按钮（复用公共结构，仅保留一份） -->
+    <button class="contact-btn" id="contactBtn">
+        <img src="whatsapp-icon.svg" alt="联系图标" class="contact-icon">
+    </button>
+
+    <!-- 社交联系模态窗口（复用公共结构，仅保留一份） -->
+    <div class="contact-modal" id="contactModal">
+        <div class="modal-content">
+            <span class="close" id="closeBtn">&times;</span>
+            <h3>联系我们</h3>
+            <div class="social-links">
+                <a href="https://wa.me/123456789" target="_blank">
+                    <img src="whatsapp-icon.svg" alt="WhatsApp">
+                    <span>WhatsApp 联系</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

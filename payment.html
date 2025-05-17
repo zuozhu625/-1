@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page - Independent Station</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 导航栏（复用公共结构） -->
+    <nav class="navbar">
+        <div class="logo">Independent Station</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#products">Products</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- 支付内容 -->
+    <div class="payment-card">
+        <h2 class="payment-title">Order Payment</h2>
+        <p class="payment-instruction">Please scan the QR code below to complete the payment:</p>
+        <div class="qrcode-wrapper">
+            <img src="qrcode.jpg" alt="Payment QR Code" class="payment-qrcode">
+        </div>
+        <p class="payment-tip">Please contact customer service to confirm the order after successful payment</p>
+        <button class="download-btn" id="downloadBtn">Download to Album</button>
+    </div>
+
+    <script>
+document.getElementById('downloadBtn').addEventListener('click', function() {
+    const qrcodeImg = document.querySelector('.payment-qrcode');
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+    
+    canvas.width = qrcodeImg.naturalWidth;
+    canvas.height = qrcodeImg.naturalHeight;
+    
+    ctx.drawImage(qrcodeImg, 0, 0, canvas.width, canvas.height);
+    
+    canvas.toBlob(function(blob) {
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'payment_qrcode.jpg';
+        a.style.display = 'none';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    }, 'image/jpeg');
+});
+</script>
+<script src="script.js"></script>
+</body>
+</html>
